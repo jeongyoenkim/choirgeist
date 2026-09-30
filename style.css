@@ -1,0 +1,827 @@
+/* ==================================================
+   기본 설정
+================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e9e7e2;
+  color: #3f3d39;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   전체 페이지
+================================================== */
+
+.invitation {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #f8f6f2;
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #f8f6f2;
+}
+
+.hero-image {
+  width: 100%;
+  height: 72vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* 사진 아래 내용 */
+
+.hero-content {
+  padding: 42px 30px 75px;
+  text-align: center;
+}
+
+.hero-date {
+  margin-bottom: 12px;
+
+  color: #77736c;
+
+  font-size: 11px;
+  letter-spacing: 2.2px;
+  font-weight: 400;
+}
+
+.hero h1 {
+  color: #373530;
+
+  font-family:
+    "Times New Roman",
+    "Noto Serif KR",
+    serif;
+
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.hero h1 span {
+  padding: 0 8px;
+
+  color: #9c968d;
+
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.hero-place {
+  margin-top: 7px;
+
+  color: #77736c;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+/* 스크롤 안내 */
+
+.scroll-guide {
+  position: absolute;
+
+  left: 50%;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #aaa59c;
+
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.scroll-guide i {
+  width: 1px;
+  height: 28px;
+
+  margin-top: 7px;
+
+  background: #aaa59c;
+
+  animation: scrollLine 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+
+}
+
+
+/* ==================================================
+   공통 SECTION
+================================================== */
+
+.section {
+  padding: 95px 30px;
+  text-align: center;
+}
+
+.section-label {
+  margin-bottom: 15px;
+
+  color: #a09b91;
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+
+  color: #44413c;
+
+  font-family:
+    "Times New Roman",
+    "Noto Serif KR",
+    serif;
+
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+/* ==================================================
+   MESSAGE
+================================================== */
+
+.message {
+  border-top: 1px solid #ebe8e2;
+}
+
+.message-text {
+  color: #5e5a53;
+
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.2;
+}
+
+.message-text p + p {
+  margin-top: 25px;
+}
+
+.parents p {
+  margin-top: 7px;
+
+  color: #77736c;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.parents {
+  margin-top: 55px;
+  padding-top: 35px;
+
+  border-top: 1px solid #e6e2db;
+}
+
+.parent-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  color: #77736c;
+
+  font-size: 11px;
+}
+
+.parent-row + .parent-row {
+  margin-top: 15px;
+}
+
+.parent-row span {
+  color: #a09b91;
+}
+
+.parent-row strong {
+  color: #55514b;
+  font-weight: 400;
+}
+
+.parent-row small {
+  color: #aaa59c;
+}
+
+.parent-row b {
+  margin-left: 2px;
+
+  color: #44413c;
+
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   CALENDAR
+================================================== */
+
+.calendar-section {
+  background: #f3f0ea;
+}
+
+.calendar-section h2 {
+  margin-bottom: 3px;
+
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.day-text {
+  margin-bottom: 35px;
+
+  color: #77736c;
+
+  font-size: 12px;
+}
+
+
+/* 달력 */
+
+.calendar {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.calendar-header,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-header {
+  margin-bottom: 12px;
+
+  color: #aaa59c;
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.calendar-grid {
+  row-gap: 15px;
+
+  color: #77736c;
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+}
+
+.calendar-grid span {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 25px;
+}
+
+.calendar-grid .wedding-day {
+  color: white;
+  z-index: 1;
+}
+
+.calendar-grid .wedding-day::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 27px;
+  height: 27px;
+
+  transform: translate(-50%, -50%);
+
+  background: #8f877b;
+
+  border-radius: 50%;
+
+  z-index: -1;
+}
+
+
+/* ==================================================
+   LOCATION
+================================================== */
+
+.location-info {
+  margin-bottom: 30px;
+}
+
+.location-info h3 {
+  margin-bottom: 7px;
+
+  color: #55514b;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.location-info p {
+  color: #77736c;
+
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.location-info .location-tel {
+  margin-top: 5px;
+
+  color: #99938a;
+}
+
+
+/* 지도 */
+
+.map {
+  width: 100%;
+  height: 260px;
+
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  background: #e6e3dc;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8e5df 25%,
+      #dedbd4 25%,
+      #dedbd4 50%,
+      #e8e5df 50%,
+      #e8e5df 75%,
+      #dedbd4 75%
+    );
+
+  background-size: 35px 35px;
+
+  color: #77736c;
+}
+
+.map-pin {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8px;
+
+  border-radius: 50% 50% 50% 0;
+
+  transform: rotate(-45deg);
+
+  background: #8f877b;
+
+  color: white;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+.map-pin span {
+  transform: rotate(45deg);
+}
+
+.map-placeholder p {
+  font-size: 11px;
+}
+
+
+/* 지도 버튼 */
+
+.location-buttons {
+  display: flex;
+
+  margin-top: 12px;
+
+  border: 1px solid #ddd8d0;
+}
+
+.location-buttons button,
+.location-buttons a {
+  flex: 1;
+
+  padding: 13px 10px;
+
+  background: transparent;
+
+  color: #6f6a62;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+.location-buttons button + a {
+  border-left: 1px solid #ddd8d0;
+}
+
+
+/* ==================================================
+   교통
+================================================== */
+
+.transport {
+  text-align: left;
+}
+
+.transport h2 {
+  text-align: center;
+}
+
+.transport-item {
+  padding: 20px 0;
+
+  border-top: 1px solid #e7e3dc;
+}
+
+.transport-item:last-child {
+  border-bottom: 1px solid #e7e3dc;
+}
+
+.transport-item h3 {
+  margin-bottom: 5px;
+
+  color: #55514b;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.transport-item p {
+  color: #77736c;
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   ACCOUNT
+================================================== */
+
+.account {
+  background: #f3f0ea;
+}
+
+.account-description {
+  margin-bottom: 30px;
+
+  color: #8b867e;
+
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.account-group {
+  border-top: 1px solid #ddd9d1;
+}
+
+.account-group:last-child {
+  border-bottom: 1px solid #ddd9d1;
+}
+
+.account-title {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 17px 5px;
+
+  background: transparent;
+
+  color: #5d5952;
+
+  font-size: 12px;
+
+  text-align: left;
+}
+
+.arrow {
+  color: #aaa59c;
+
+  transition: transform .3s ease;
+}
+
+.account-title.active .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* 계좌 내용 */
+
+.account-content {
+  display: none;
+
+  padding: 0 5px 12px;
+
+  text-align: left;
+}
+
+.account-content.open {
+  display: block;
+}
+
+.account-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 0;
+
+  border-top: 1px solid #e5e1da;
+}
+
+.account-person strong {
+  color: #5a564f;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.account-person p {
+  margin-top: 3px;
+
+  color: #858078;
+
+  font-size: 11px;
+}
+
+.account-person button {
+  padding: 6px 11px;
+
+  border: 1px solid #d5d0c8;
+
+  background: transparent;
+
+  color: #77736c;
+
+  font-size: 10px;
+}
+
+
+
+/* ==================================================
+   SHARE
+================================================== */
+
+.share {
+  padding: 30px 30px 80px;
+
+  text-align: center;
+}
+
+.share button {
+  padding: 12px 25px;
+
+  border: 1px solid #d9d4cc;
+
+  background: transparent;
+
+  color: #77736c;
+
+  font-size: 11px;
+}
+
+.share button span {
+  margin-right: 6px;
+
+  font-size: 14px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+  padding: 40px 20px 50px;
+
+  border-top: 1px solid #e8e4dd;
+
+  color: #aaa59c;
+
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 5px;
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+footer span {
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   TOAST
+================================================== */
+
+.toast {
+  position: fixed;
+
+  left: 50%;
+  bottom: 30px;
+
+  z-index: 1000;
+
+  padding: 11px 18px;
+
+  transform:
+    translate(-50%, 20px);
+
+  border-radius: 3px;
+
+  background: rgba(50, 48, 44, .92);
+
+  color: white;
+
+  font-size: 11px;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+}
+
+.toast.show {
+  opacity: 1;
+
+  transform:
+    translate(-50%, 0);
+}
+
+
+/* ==================================================
+   PC 화면
+================================================== */
+
+@media (min-width: 641px) {
+
+  body {
+    padding: 30px 0;
+  }
+
+  .invitation {
+    box-shadow:
+      0 0 30px rgba(0,0,0,.08);
+  }
+
+}
+
+
+/* ==================================================
+   작은 휴대폰
+================================================== */
+
+@media (max-width: 360px) {
+
+  .section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .parent-row {
+    font-size: 10px;
+  }
+
+}
